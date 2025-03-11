@@ -1,0 +1,20 @@
+<div class="container">
+	<!-- Sidebar (Always Visible) -->
+	<div class="sidebar">
+		<ul>
+			<li><a routerLink="/home">HOME</a></li>
+			<li><a routerLink="/experience">EXPERIENCE</a></li>
+			<li><a routerLink="/education">EDUCATION</a></li>
+			<li><a routerLink="/skills">SKILLS</a></li>
+			<li><a routerLink="/projects">PROJECTS</a></li>
+		</ul>
+	</div>
+
+	<!-- Right Content (With Smooth Bottom-Up Animation) -->
+	<div class="content">
+		<div [@routeAnimations]="prepareRoute(outlet)" class="animated-container">
+			<!-- <div #contentContainer class="animated-container"> -->
+			<router-outlet #outlet="outlet"></router-outlet>
+		</div>
+	</div>
+</div>
